@@ -31,12 +31,6 @@ const featureCards = [
   },
 ]
 
-const stats = [
-  { value: '250+', label: 'Projects launched' },
-  { value: '99%', label: 'Client satisfaction' },
-  { value: '24/7', label: 'Support mindset' },
-]
-
 const processSteps = [
   { title: 'Discover', text: 'We learn your goals, challenges, and market opportunities.' },
   { title: 'Design', text: 'We turn strategy into polished experiences and user journeys.' },
@@ -160,17 +154,6 @@ function HomePage({ onNavigate }) {
       </section>
 
       <section className="mt-20">
-        <div className="grid gap-5 md:grid-cols-3">
-          {stats.map(({ value, label }) => (
-            <div key={label} className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-6 text-center">
-              <p className="text-3xl font-black text-white">{value}</p>
-              <p className="mt-2 text-sm text-slate-300">{label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-20">
         <div className="mb-10 max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Why clients choose us</p>
           <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">Technology partners built for execution and growth.</h2>
@@ -274,7 +257,7 @@ function HomePage({ onNavigate }) {
             <button
               type="button"
               onClick={() => onNavigate('contact')}
-              className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-stone-700"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-stone-100"
             >
               Contact us
             </button>
