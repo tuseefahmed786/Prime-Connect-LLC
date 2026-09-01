@@ -82,6 +82,7 @@ const strengths = [
 
 const contactDetails = [
   { label: 'Phone', value: '(346) 379-6826', href: 'tel:+13463796826' },
+  { label: 'Email', value: 'primeconnect456@gmail.com', href: 'mailto:primeconnect456@gmail.com' },
   { label: 'Address', value: '1705 Meadow Ct, Gwynn Oak, MD 21207', href: 'https://maps.google.com/?q=1705+Meadow+Ct+Gwynn+Oak+MD+21207' },
 ]
 
@@ -303,7 +304,7 @@ function App() {
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
             {contactDetails.map(({ label, value, href }) => (
               <a
                 key={label}
@@ -324,7 +325,10 @@ function App() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>© 2026 Prime Connect LLC</p>
           <p>1705 Meadow Ct, Gwynn Oak, MD 21207</p>
-          <a href="tel:+13463796826" className="text-cyan-300 transition hover:text-cyan-200">(346) 379-6826</a>
+          <div className="flex flex-col gap-1 md:items-end">
+            <a href="tel:+13463796826" className="text-cyan-300 transition hover:text-cyan-200">(346) 379-6826</a>
+            <a href="mailto:primeconnect456@gmail.com" className="text-cyan-300 transition hover:text-cyan-200">primeconnect456@gmail.com</a>
+          </div>
         </div>
       </footer>
     </div>
