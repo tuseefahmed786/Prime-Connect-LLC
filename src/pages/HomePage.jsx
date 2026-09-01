@@ -47,17 +47,6 @@ const serviceHighlights = [
   { slug: 'cybersecurity', icon: ShieldCheck, title: 'Cybersecurity', copy: 'Secure systems, monitoring, and protection strategies built for long-term peace of mind.' },
 ]
 
-const testimonials = [
-  {
-    quote: 'Prime Connect helped us modernize our digital presence and gave us a stronger foundation to grow from.',
-    author: 'Operations Lead',
-  },
-  {
-    quote: 'Their team mixed business thinking with technical execution, and the result felt polished from day one.',
-    author: 'Founder',
-  },
-]
-
 function HomePage({ onNavigate }) {
   return (
     <>
@@ -221,27 +210,6 @@ function HomePage({ onNavigate }) {
               <h3 className="text-xl font-bold text-white">{step.title}</h3>
               <p className="mt-3 text-sm leading-6 text-slate-300">{step.text}</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-20">
-        <div className="mb-10 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Client feedback</p>
-          <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">Trusted by businesses that value clarity and momentum.</h2>
-        </div>
-
-        <div className="grid gap-5 lg:grid-cols-2">
-          {testimonials.map(({ quote, author }) => (
-            <blockquote key={author} className="rounded-[1.7rem] border border-slate-800 bg-slate-900/80 p-6">
-              <div className="mb-4 flex items-center gap-1 text-cyan-300">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" />
-                ))}
-              </div>
-              <p className="text-lg leading-8 text-slate-200">“{quote}”</p>
-              <footer className="mt-5 text-sm font-medium text-slate-400">— {author}</footer>
-            </blockquote>
           ))}
         </div>
       </section>

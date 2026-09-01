@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Phone } from 'lucide-react'
+import { Phone, Menu, X } from 'lucide-react'
 import './App.css'
 import HomePage from './pages/HomePage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
@@ -39,6 +39,7 @@ function getRouteFromLocation() {
 
 function App() {
   const [route, setRoute] = useState(getRouteFromLocation)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navigate = (nextPage, slug = null) => {
     let path = '/'
@@ -50,6 +51,7 @@ function App() {
 
     window.history.pushState({}, '', path)
     setRoute(nextPage === 'service' ? { page: 'service', slug } : { page: nextPage })
+    setMobileMenuOpen(false)
   }
 
   useEffect(() => {
@@ -100,14 +102,58 @@ function App() {
             ))}
           </nav>
 
-          <a
-            href="tel:+13463796826"
-            className="inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-[#ffffff] transition hover:bg-neutral-800"
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="tel:+13463796826"
+              className="inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-neutral-800"
+            >
+              <Phone size={16} />
+              Call Now
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="flex items-center md:hidden"
           >
-            <Phone size={16} className="text-[#ffffff]" />
-            <span className="text-[#ffffff]">Call Now</span>
-          </a>
+            {mobileMenuOpen ? (
+              <X size={24} className="text-white" />
+            ) : (
+              <Menu size={24} className="text-white" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="mt-3 rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-lg md:hidden">
+            <nav className="flex flex-col gap-3">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => navigate(item.id === 'home' ? 'home' : item.id)}
+                  className={`rounded-lg px-4 py-2 text-left text-sm font-medium transition ${
+                    route.page === item.id
+                      ? 'bg-slate-900 text-white'
+                      : 'text-slate-700 hover:bg-slate-100'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+              <a
+                href="tel:+13463796826"
+                className="mt-2 flex items-center gap-2 rounded-lg bg-black px-4 py-2 text-sm font-semibold !text-white transition hover:bg-neutral-800"
+              >
+                <Phone size={16} className="!text-white" />
+                Call Now
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
 
       <main className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">{renderPage()}</main>
