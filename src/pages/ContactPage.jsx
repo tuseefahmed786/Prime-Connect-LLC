@@ -1,9 +1,9 @@
 import { Mail, MapPinned, Phone } from 'lucide-react'
 
 const contactDetails = [
-  { label: 'Phone', value: '(346) 379-6826', href: 'tel:+13463796826', icon: Phone },
+  { label: 'Phone', value: '(425) 554-1050', href: 'tel:+14255541050', icon: Phone },
   { label: 'Email', value: 'primeconnect456@gmail.com', href: 'mailto:primeconnect456@gmail.com', icon: Mail },
-  { label: 'Address', value: '1705 Meadow Ct, Gwynn Oak, MD 21207', href: 'https://maps.google.com/?q=1705+Meadow+Ct+Gwynn+Oak+MD+21207', icon: MapPinned },
+  { label: 'Address', value: 'Baltimore County, MD 21244', href: 'https://maps.google.com/?q=Baltimore+County+MD+21244', icon: MapPinned },
 ]
 
 function ContactPage() {

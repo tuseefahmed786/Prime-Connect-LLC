@@ -104,7 +104,7 @@ function App() {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="tel:+13463796826"
+              href="tel:+14255541050"
               className="inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-neutral-800"
             >
               <Phone size={16} />
@@ -145,7 +145,7 @@ function App() {
                 </button>
               ))}
               <a
-                href="tel:+13463796826"
+                href="tel:+14255541050"
                 className="mt-2 flex items-center gap-2 rounded-lg bg-black px-4 py-2 text-sm font-semibold !text-white transition hover:bg-neutral-800"
               >
                 <Phone size={16} className="!text-white" />
@@ -161,9 +161,9 @@ function App() {
       <footer className="border-t border-slate-800 bg-slate-950/70">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>© 2026 Prime Connect LLC</p>
-          <p>1705 Meadow Ct, Gwynn Oak, MD 21207</p>
+          <p>Baltimore County, MD 21244</p>
           <div className="flex flex-col gap-1 md:items-end">
-            <a href="tel:+13463796826" className="text-cyan-300 transition hover:text-cyan-200">(346) 379-6826</a>
+            <a href="tel:+14255541050" className="text-cyan-300 transition hover:text-cyan-200">(425) 554-1050</a>
             <a href="mailto:primeconnect456@gmail.com" className="text-cyan-300 transition hover:text-cyan-200">primeconnect456@gmail.com</a>
           </div>
         </div>

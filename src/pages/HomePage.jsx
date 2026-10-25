@@ -80,11 +80,11 @@ function HomePage({ onNavigate }) {
                 <ArrowRight size={18} />
               </button>
               <a
-                href="tel:+13463796826"
+                href="tel:+14255541050"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:text-cyan-200"
               >
                 <Phone size={18} />
-                (346) 379-6826
+                (425) 554-1050
               </a>
             </div>
 
@@ -230,7 +230,7 @@ function HomePage({ onNavigate }) {
               Contact us
             </button>
             <a
-              href="tel:+13463796826"
+              href="tel:+14255541050"
               className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-stone-400"
             >
               <Phone size={17} />
